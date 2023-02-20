@@ -2,7 +2,7 @@
 /**
  * main - alphABET
  *
- * Return; Always 0(successful)
+ * Return: Always 0
  */
 int main(void)
 {
