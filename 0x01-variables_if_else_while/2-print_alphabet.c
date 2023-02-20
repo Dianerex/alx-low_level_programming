@@ -1,17 +1,14 @@
 #include <stdio.h>
-#include <ctype.h>
 /**
- * main -  Program that prints the alphabet in lowercase
+ * main - Prints the alphabet in lowercase.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-int x;
-for (x = 'A'; x <= 'Z'; x++)
-{
-char small = tolower(x);
-putchar(small);
-}
+char lc;
+for (lc = 'a'; lc <= 'z'; lc++)
+	putchar(lc);
+putchar('\n');
 return (0);
 }
