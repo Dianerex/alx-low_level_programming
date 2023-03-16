@@ -61,16 +61,16 @@ char *_initialize_array(char *ar, int lar)
  */
 int _checknum(char *argv[], int n)
 {
-	int ln;
+int ln;
 
-	for (ln = 0; argv[n][ln]; ln++)
-		if (!isdigit(argv[n][ln]))
-		{
-			printf("Error\n");
-			exit(98);
-		}
+for (ln = 0; argv[n][ln]; ln++)
+if (!isdigit(argv[n][ln]))
+{
+printf("Error\n");
+exit(98);
+}
 
-	return (ln);
+return (ln);
 }
 
 /**
@@ -83,24 +83,24 @@ int _checknum(char *argv[], int n)
  */
 int main(int argc, char *argv[])
 {
-	int ln1, ln2, lnout, add, addl, i, j, k, ca;
-	char *nout;
+int ln1, ln2, lnout, add, addl, i, j, k, ca;
+char *nout;
 
-	if (argc != 3)
-		printf("Error\n"), exit(98);
-	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
-	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
-	if (nout == NULL)
-		printf("Error\n"), exit(98);
-	nout = _initialize_array(nout, lnout);
-	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
-	for (; k >= 0; k--, i--)
-	{
-		if (i < 0)
-		{
-			if (addl > 0)
-			{
-				add = (nout[k] - '0') + addl;
+if (argc != 3)
+printf("Error\n"), exit(98);
+ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
+_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
+if (nout == NULL)
+printf("Error\n"), exit(98);
+nout = _initialize_array(nout, lnout);
+k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
+for (; k >= 0; k--, i--)
+{
+if (i < 0)
+{
+if (addl > 0)
+{
+add = (nout[k] - '0') + addl;
 if (add > 9)
 nout[k - 1] = (add / 10) + '0';
 nout[k] = (add % 10) + '0';
